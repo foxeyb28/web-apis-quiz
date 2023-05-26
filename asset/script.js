@@ -20,3 +20,4 @@
 all questions will be stored in an array, which will look like this:
 pq1, q2, 1=q3
 */
+var endTime
