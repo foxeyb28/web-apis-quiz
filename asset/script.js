@@ -20,6 +20,7 @@
 all questions will be stored in an array, which will look like this:
 pq1, q2, 1=q3
 */
+
 var questionarray = [
     {
         question: "Which Pie Filling is needed to make a Peach 3 ingrediant cake",
@@ -46,7 +47,7 @@ var index = 0
 var questionsDiv = document.querySelector("#quiz-section");
 
 function renderQuestion(questionObj) {
-    questionsDiv.innerHTML=""
+    questionsDiv.innerHTML = ""
     var question = document.createElement("h1");
     // get question from obj
     question.textContent = questionObj.question
@@ -92,28 +93,30 @@ function renderQuestion(questionObj) {
 function checkAnswers() {
     console.log("button clicked");
     console.log(this)
-    if (this.textContent ===questionarray[index].answer) {
+    if (this.textContent === questionarray[index].answer) {
         console.log("correct");
     } else {
-       console.log("wrong"); 
+        console.log("wrong");
     }
-    index ++
-    if (index >=questionarray.length) {
-        console.log("game over")  
+    index++
+    if (index >= questionarray.length) {
+        console.log("game over")
         //excute game over function 
     } else {
         renderQuestion(questionarray[index])
-        
+
     }
-        
-    
+
+
 }
 
 
 
 
-var endTime;
+
+
 function startQuiz() {
+
     console.log("quiz started")
     renderQuestion(questionarray[index])
     //excute timer function here
